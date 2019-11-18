@@ -1,5 +1,5 @@
 // Initialize your app
-var BookflyApp = new Framework7({
+var SafarexApps = new Framework7({
     modalTitle: 'My App',
     // If it is webapp, we can enable hash navigation:
     pushState: true,
@@ -29,10 +29,10 @@ var BookflyApp = new Framework7({
 	
     // Hide and show indicator during ajax requests
     onAjaxStart: function (xhr) {
-        BookflyApp.showIndicator();
+        SafarexApps.showIndicator();
     },
     onAjaxComplete: function (xhr) {
-        BookflyApp.hideIndicator();
+        SafarexApps.hideIndicator();
     },
 
 });
@@ -40,17 +40,17 @@ var BookflyApp = new Framework7({
 // Export selectors engine
 var $$ = Dom7;
 // Add view
-var mainView = BookflyApp.addView('.view-main', {
+var mainView = SafarexApps.addView('.view-main', {
    domCache: true,
 });
 
 
 var RequestURL ='https://www.adivaha.com/demo/MobAppRequest';
-var TPHotelUrl ='https://apphotel.bookingfly.net/hotels';
-var TPFlightUrl ='https://appflight.bookingfly.net/flights';
-var marker='155364';
+var TPHotelUrl ='https://hotel.tripcollection.com/hotels';
+var TPFlightUrl ='https://flight.tripcollection.com/flights';
+var marker='250960';
 
-BookflyApp.onPageInit('index', function (page) {
+SafarexApps.onPageInit('index', function (page) {
 $$('.pageFlashLoaderKK').show();	
 setTimeout(function(){ $$('.pageFlashLoaderKK').hide('slow'); }, 3000);	
 
@@ -75,18 +75,18 @@ var startDate_txt = weekday[strDate.getDay()]+', '+strDate.getDate()+' '+monthNa
 var endDate_txt = weekday[enrDate.getDay()]+', '+enrDate.getDate()+' '+monthNames[(enrDate.getMonth()+1)]+' '+enrDate.getFullYear().toString().substr(-2);
 
 
-var htmlHotel ='<div class="history-home-page-main-left"><i class="fa fa-home"></i></div><a href="'+TPHotelUrl+'?marker='+marker+'&destination=Dubai,United Arab Emirates&checkIn='+checkIn+'&checkOut='+checkOut+'&adults=2&children=&language=en&currency=USD&&cityId=25495" class="link external"><div class="history-home-page-main-right"><div class="history-home-text">Dubai - United Arab Emirates</div><div class="history-home-text1">'+startDate_txt+' - '+endDate_txt+'</div><div class="history-home-text2"><i class="fa fa-user"></i> 2 Guests </div><div class="history-home-text3"><i class="fa fa-bed"></i>1 Room </div></a></div>';
+var htmlHotel ='<div class="history-home-page-main-left"><img src="img/hotels1.jpeg"></div><a href="'+TPHotelUrl+'?marker='+marker+'&destination=Dubai,United Arab Emirates&checkIn='+checkIn+'&checkOut='+checkOut+'&adults=2&children=&language=en&currency=USD&&cityId=25495" class="link external"><div class="history-home-page-main-right"><div class="history-home-text">Dubai - United Arab Emirates</div><div class="history-home-text1">'+startDate_txt+' - '+endDate_txt+'</div><div class="history-home-text2"><i class="fa fa-user"></i> 2 Guests </div><div class="history-home-text3"><i class="fa fa-bed"></i>1 Room </div></a></div>';
 $$('#storeHotelLists').html(htmlHotel);
 
 var htmlFlight ='<div class="history-home-page-main-left">'+
-					'<i class="fa fa-plane"></i>'+
+					'<img src="img/flights1.jpeg">'+
 				'</div>'+
 				'<div class="history-home-page-main-right">'+
 				  '<div class="history-recents">'+
 						'<div class="history-recents-left">'+
 						 '<a href="'+TPFlightUrl+'?marker='+marker+'&origin_name=Delhi,%20India&origin_iata=DEL&destination_name=Goa,%20India&destination_iata=GOI&depart_date='+checkIn+'&return_date=&Flights_Return_direct=enable&with_request=true&adults=1&children=0&infants=0&trip_class=0&currency=USD&locale=en&one_way=true&ct_guests=1passenger&ct_rooms=1" class="link external"><div class="deltopatfri">'+
 							'<div class="deltopatfri1">'+
-								'<span>DEL</span> <span><i class="fa fa-arrow-right"></i></span> <span>GOI</span>'+
+								'<span>DEl</span> <span><i class="fa fa-arrow-right"></i></span> <span>GOI</span>'+
 								'</div>'+
 									'<div class="deltopatfri2">'+
 								'<span>'+startDate_txt+'</span>'+
@@ -133,7 +133,7 @@ if(page.name=='search-hotels'){
 	var monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun","Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 	
     var today =new Date();
-	var calendarRange = BookflyApp.calendar({
+	var calendarRange = SafarexApps.calendar({
     input: '#appCalendar',
     dateFormat: 'M dd yyyy',
     rangePicker: true,
@@ -317,13 +317,14 @@ if(page.name=='search-hotels'){
 	}
 	
 	var rooms =$$('#number_of_rooms').val();
-   	$$('#roomGuestTxt').html(rooms+' Rooms, '+guest+' Guests ');
-	$$('#selectedDest_adults').html(guest+' Guests, '+rooms+' Rooms');
+   	//$$('#roomGuestTxt').html(rooms+' Rooms, '+guest+' Guests ');
+	$$('#roomGuestTxt').html(guest+' Guests ');
+	$$('#selectedDest_adults').html(guest+' Guests');
   }
   
   
   /*=== Auto suggetion ===*/
-  var autocompleteDropdownAjax = BookflyApp.autocomplete({
+  var autocompleteDropdownAjax = SafarexApps.autocomplete({
 	opener: $$('#autocomplete-standalone-popup'),
     openIn: 'popup',
 	backOnSelect: true,
@@ -380,8 +381,8 @@ if(page.name=='search-hotels'){
   
    var hotelObject = [];
    $$('.findHotelResults').on('click', function(e){
-	   var formData = BookflyApp.formToData('#searchHotel_frm');
-	   BookflyApp.formStoreData('HotelRequestData',formData);
+	   var formData = SafarexApps.formToData('#searchHotel_frm');
+	   SafarexApps.formStoreData('HotelRequestData',formData);
 	  
 	 var adults =$$('#adults_0').val(); 
 	 var childs =$$('#childs_0').val();
@@ -399,7 +400,7 @@ if(page.name=='search-hotels'){
       var checkIn =startDateArr[2]+'-'+startDateArr[0]+'-'+startDateArr[1];
 	  var checkOut =endDateArr[2]+'-'+endDateArr[0]+'-'+endDateArr[1];
 
-	  var param ='marker='+marker+'&destination='+$$('#destination').val()+'&checkIn='+checkIn+'&checkOut='+checkOut+'&adults='+adults+'&children='+childAgeArr+'&language=en&currency=USD&&cityId='+$$('#region_id').val();
+	  var param ='marker='+marker+'&destination='+$$('#destination').val()+'&checkIn='+checkIn+'&checkOut='+checkOut+'&adults='+adults+'&children='+childAgeArr+'&language=en&currency=AED&&cityId='+$$('#region_id').val();
      var url =TPHotelUrl+'?'+param;
      window.location.href=url;
 	  
@@ -430,7 +431,7 @@ if(page.name=='search-flights'){
     var weekday = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
 	var monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun","Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
     var today =new Date();
-	var calendarRange = BookflyApp.calendar({
+	var calendarRange = SafarexApps.calendar({
 	input: '#appCalendar',
 	dateFormat: 'M dd yyyy',
 	rangePicker: true,
@@ -455,7 +456,7 @@ if(page.name=='search-flights'){
 	   }
 	});	
    /*=== Activity Auto suggetion ===*/	
-   var autocompleteDropdownAjax = BookflyApp.autocomplete({
+   var autocompleteDropdownAjax = SafarexApps.autocomplete({
 	opener: $$('#autocomplete-standalone-popup'),
 	openIn: 'popup',
 	backOnSelect: true,
@@ -501,7 +502,7 @@ if(page.name=='search-flights'){
 	}
   });
 
-  var autocompleteDropdownAjax = BookflyApp.autocomplete({
+  var autocompleteDropdownAjax = SafarexApps.autocomplete({
 	opener: $$('#autocomplete-standalone-popup-to'),
 	openIn: 'popup',
 	backOnSelect: true,
