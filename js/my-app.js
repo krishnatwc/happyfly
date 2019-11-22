@@ -45,7 +45,7 @@ var mainView = SafarexApps.addView('.view-main', {
 });
 
 
-var RequestURL ='https://www.adivaha.com/demo/MobAppRequest';
+var RequestURL ='//www.adivaha.com/demo/MobAppRequest';
 var TPHotelUrl ='//hotel.tripcollection.com/hotels';
 var TPFlightUrl ='//flight.tripcollection.com/flights';
 var marker='250960';
@@ -400,7 +400,7 @@ if(page.name=='search-hotels'){
       var checkIn =startDateArr[2]+'-'+startDateArr[0]+'-'+startDateArr[1];
 	  var checkOut =endDateArr[2]+'-'+endDateArr[0]+'-'+endDateArr[1];
 
-	  var param ='marker='+marker+'&destination='+$$('#destination').val()+'&checkIn='+checkIn+'&checkOut='+checkOut+'&adults='+adults+'&children='+childAgeArr+'&language=en&currency=AED&&cityId='+$$('#region_id').val();
+	  var param ='marker='+marker+'&destination='+$$('#destination').val()+'&checkIn='+checkIn+'&checkOut='+checkOut+'&adults='+adults+'&children='+childAgeArr+'&language=en&currency=USD&&cityId='+$$('#region_id').val();
      var url =TPHotelUrl+'?'+param;
      window.location.href=url;
 	  
