@@ -45,9 +45,9 @@ var mainView = TripcollectionApps.addView('.view-main', {
 });
 
 
-var RequestURL ='//www.adivaha.com/demo/MobAppRequest';
-var TPHotelUrl ='//hotel.tripcollection.com/hotels';
-var TPFlightUrl ='//flight.tripcollection.com/flights';
+var RequestURL ='https://www.adivaha.com/demo/MobAppRequest';
+var TPHotelUrl ='https://hotel.tripcollection.com/hotels';
+var TPFlightUrl ='https://flight.tripcollection.com/flights';
 var marker='250960';
 
 TripcollectionApps.onPageInit('index', function (page) {
