@@ -5,8 +5,7 @@
     <author email="mail@tripcollection.com" href="https://tripcollection.com/"> tripcollection</author>
     <content src="index.html" />
     <preference name="DisallowOverscroll" value="true" />
-     <preference name="phonegap-version" value="cli-6.3.0" />	
-    <preference name="android-minSdkVersion" value="16" />
+     <preference name="android-minSdkVersion" value="16" />
     <preference name="android-targetSdkVersion" value="27" />
 	
     <preference name="android-maxSdkVersion" value="26" />
