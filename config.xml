@@ -7,7 +7,7 @@
 	<preference name="phonegap-version" value="cli-9.0.0" />
     <preference name="DisallowOverscroll" value="true" />
      <preference name="android-minSdkVersion" value="16" />
-    <preference name="android-targetSdkVersion" value="27" />
+    <preference name="android-targetSdkVersion" value="28" />
 	
     <preference name="android-maxSdkVersion" value="26" />
     <plugin name="cordova-plugin-battery-status" source="npm" spec="~1.1.1" />
