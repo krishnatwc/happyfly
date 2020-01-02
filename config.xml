@@ -4,7 +4,7 @@
     <description> Find your hotels and flights.</description>
     <author email="mail@tripcollection.com" href="https://tripcollection.com/"> tripcollection</author>
     <content src="index.html" />
-	
+	<preference name="phonegap-version" value="cli-9.0.0" />
     <preference name="DisallowOverscroll" value="true" />
      <preference name="android-minSdkVersion" value="16" />
     <preference name="android-targetSdkVersion" value="28" />
