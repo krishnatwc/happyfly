@@ -4,7 +4,6 @@
     <description> Find your hotels and flights.</description>
     <author email="mail@tripcollection.com" href="https://tripcollection.com/"> tripcollection</author>
     <content src="index.html" />
-	<preference name="phonegap-version" value="cli-9.0.0" />
 	<preference name="DisallowOverscroll" value="true" />
 	<preference name="deployment-target" value="10.0" />
 <preference name="AllowInlineMediaPlayback" value="true" />
