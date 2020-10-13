@@ -55,39 +55,55 @@
 	<script type="text/javascript" src="//maps.googleapis.com/maps/api/js?key=AIzaSyB2xTOKHvuxgfndELjPAFrfYvoUbWLWhGo&sensor=false&libraries=places&"></script>
 	<script src="js/infobox.js"></script> 
 	 
-    <title>Tripcollection</title>
+    <title>Hello App</title>
 	
 </head>
 
 <body class="theme-green">
 	<div class="lds-grid-loading  pageFlashLoaderKK" style="display:none;">
-	  <div class="lds-grid">
-	    <img src="img/logo_11.png">
-	  </div>
-	  <div class="lds-grid">
-	   <img src="img/logo_5.svg" style="margin:25px;">
-	  </div>
 	  
+	  <div class="lds-grid">
+	   
+		 <img src="img/logo_5.svg" style="margin:25px;">
+	    <!--<div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>-->
+	  </div>
 	</div>
+
+	
+	
     <div class="panel panel-left panel-cover">
         <div class="view navbar-fixed">
             <div class="pages">
                 <div data-page="panel-left" class="page">
-                     <div class="page-content BontentBlockDrawer">
+               
+
+                    <div class="page-content BontentBlockDrawer">
                         <div class="content-block panel-background">
                             <p> <a href="#" class="close-panel"><i class="fa fa-times" aria-hidden="true"></i></a>
-								<a href="#" class="mobileLogo"><img src="img/logo_11.png" alt=""></a>
-							</p>
 							
+							<a href="#" class="mobileLogo"><img src="img/logo_1.png" alt=""></a>
+						
+							</p>
+						
                         </div>
                        <div class="list-menu-mobile">
 							<ul class="beforeLogin" id="leftMenuBar">
 								<li><a href="" class="close-panel"><i class="fa fa-home"></i>Home</a></li>
-								<li><a href="search-hotels.html?hotelType=1" class="close-panel"><i class="fa fa-bed"></i>Hotel</a></li>
+								
 								<li><a href="search-flights.html" class="close-panel"><i class="fa fa-plane"></i>Flight</a></li>
 								
+								<li><a href="login-page.html" class="close-panel"><i class="fa fa-user"></i>Login</a></li>
 							</ul>
-								<div class="overlayContent"></div>
+							
+							<!--<ul class="afterLogin" id="leftMenuBar">
+								<li><a href="" class="close-panel"><i class="fa fa-home"></i>Home</a></li>
+								
+								<li><a href="search-flights.html" class="close-panel"><i class="fa fa-plane"></i>Flight</a></li>
+								
+								<li><a href="booking.html" class="close-panel"><i class="fa fa-user"></i> My Booking</a></li>
+								
+							</ul>-->
+							
 					   </div>
                     </div>
                 </div>
@@ -98,9 +114,10 @@
         <div class="view view-main">
             <div class="pages navbar-fixed toolbar-fixed">
                 <div class="page pageBackgroundColor" data-page="index">
-                    <div class="navbar theme-red">
-                        <div class="navbar-inner">
-                            <div class="left"><a href="#" class="open-panel link icon-only"><i class="icon icon-bars"></i></a></div>
+                    <div class="navbar theme-red box-shadow-none">
+                        <div class="navbar-inner box-shadow-none">
+						                            <div class="left"> <a href="#" class="HomeLogoimg"><img src="img/logo_1.png"></a></div>
+                            <div class="right"><a href="#" class="open-panel link icon-only"><i class="icon icon-bars"></i></a></div>
                            
 
                         </div>
@@ -109,8 +126,9 @@
                     <div class="page-content home-page-padding">
                         <div class="HomeCard">
                             <div class="carBackColor">
-                                <a href="#" class="HomeLogoimg"><img src="img/logo_11.png"></a>
-									<div class="Searchall">Book Your Ideal Hotels and Flights - Search, Compare and Save Money with Tripcollection</div>
+                               
+									<div class="Searchall">Book a Flight </div>
+									<p>We guarantee you the lowest price offer, with our happy offers services to get our clients to book the tickets at the most economical cost possible.</p>
                                 <div class="card-content-inner1">
                                     <div class="" id="chevron">
                                       
@@ -122,73 +140,18 @@
                                 <div class="card-content">
                                     <ul class="contentblock1">
 									
-										<li><a href="search-hotels.html?hotelType=1" class="hotelsicons"><i class="fa fa-bed"></i><span class="displaysection">Hotels</span></a></li>
-										
 										<li> <a href="search-flights.html" class=""><i class="fa fa-plane"></i><span class="displaysection"> Flights</span></a></li>
 										
+                                      
                                     </ul>
                                 </div>
                             </div>
                         </div>
 
-                   <!--  <div class="history-home-page">
-						<div class="history-home-page-main"  id="storeHotelLists">
-						
-							<div class="history-home-page-main-left">
-								<img src="img/hotels1.jpeg">
-							</div>
-							<div class="history-home-page-main-right">
-								<div class="history-home-text">Dubai - United Arab Emirates </div>
-								<div class="history-home-text1">Fir, 25 May - Sat, 26 May </div>
-								<div class="history-home-text2" style="width:50%;float:left;"><i class="fa fa-user"></i> 2 Guests </div>
-								<div class="history-home-text3" style="width:50%;float:left;"><i class="fa fa-bed"></i>1 Room </div>
-							</div>
-							
-						</div>
-					 </div>
-					  <div class="history-home-page">
-						<div class="history-home-page-main" id="storeFlightLists">
-						
-							<div class="history-home-page-main-left">
-								<img src="img/flights1.jpeg">
-							</div>
-							<div class="history-home-page-main-right">
-								<div class="history-recents">
-									<div class="history-recents-left">
-										<div class="deltopatfri">
-										<div class="deltopatfri1">
-											<span>DEL</span> <span><i class="fa fa-arrow-right"></i></span> <span>PAT</span>
-											</div>
-												<div class="deltopatfri2">
-											<span>fri,</span> <span>05</span> <span>Oct</span>
-										</div>
-											
-										</div>
-										<div class="deltopatfri">
-										<div class="deltopatfri1">
-											<span>DEL</span> <span><i class="fa fa-arrow-right"></i></span> <span>PAT</span>
-											</div>
-												<div class="deltopatfri2">
-											<span>fri,</span> <span>05</span> <span>Oct</span>
-										</div>
-											
-										</div>
-								</div>
-							
-								</div>
-							
-								
-								<div class="history-home-text2"><i class="fa fa-briefcase"></i>  Economy<span class="economyadlet">1 <i class="fa fa-male"></i> </span> </div>
-								
-							</div>
-						</div>
-						 
-					 </div>-->
-					 
-					 <!---->
+                    
 
                     </div>
-						<div class="overlayDivhome">					</div>
+						<div class="wave">					</div>
                 </div>
             </div>
         </div>
@@ -201,8 +164,23 @@
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
 	
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/iframeResizer.min.js"></script>
     <script type="text/javascript">
         app.initialize();
+		var readyStateCheckInterval = setInterval(function() {iFrameResize({ log: true,onMessage: function(messageData) {
+		  if(messageData.message.p=='hotel_detail'){
+            document.getElementById("app_hoteldetailLink").setAttribute('href',messageData.message.data);			
+			document.getElementById("app_hoteldetailLink").click();
+		  }
+		  else{
+          document
+            .getElementsByTagName('iframe')[0]
+            .iFrameResizer.sendMessage('Hello back from parent page')
+		  }
+			
+			
+        } });}, 10);
     </script>
 </body>
 

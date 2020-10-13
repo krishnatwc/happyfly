@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.tripcollectiontest.myapp" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>Tripcollection</name>
+<widget id="com.happyfly.myapp" version="6.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>happyfly</name>
     <description> Find your hotels and flights.</description>
-    <author email="mail@tripcollection.com" href="https://tripcollection.com/"> tripcollection</author>
+    <author email="happyfly@gmail.com" href="hhttp://happyfly.in/"> happyfly</author>
     <content src="index.html" />
 	<preference name="DisallowOverscroll" value="true" />
 	<preference name="deployment-target" value="10.0" />
@@ -117,3 +117,4 @@
         <allow-intent href="itms-apps:*" />
     </platform>
 </widget>
+
