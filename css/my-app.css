@@ -1,4 +1,4 @@
-.navbar-inner{    box-shadow: 0 2px 12px rgba(0,0,0,.175) !important;}
+.navbar-inner{     box-shadow: none !important;}
 #pageContentDiv .menu-toggle{display:none}
 .navbar-fixed.toolbar-fixed .page-content{     padding-top: 35px}
 .padding-top-56{padding-top: 56px !important;}
@@ -28,7 +28,7 @@
     box-shadow: none;
     padding-right: 0;
     border-bottom: 2px solid;
-    border-image: linear-gradient(to right, #FF9800, #FF5722);
+    border-image: linear-gradient(to right, #db1361, #d91361);
     border-image-slice: 1;}
 .contentblock1 li a{}
 .contentblock1 li a i{
@@ -39,9 +39,7 @@
         display: block;
     font-size: 18px;
     margin-top: 0;
-    background: linear-gradient(to right, #f7b131 0%, #fb7023 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+        color: #d91361;
     font-weight: 600;
     text-align: right;
 }
@@ -111,7 +109,7 @@ img.ks-demo-lazy {display: block;width: 100%;height: auto;}
     max-width: 100%;
     font-size: 14px;
     font-weight: 500;
-    padding-bottom: 0px;}.navbar .center{    font-size: 14px !important;}
+    padding-bottom: 0px;}.navbar .center{   }
 .search-resultsPageNavbarTitlef{font-size: 12px;color: #fff;}
 .boxPage-title .material-icons{font-size: 20px;position: absolute;top: 16px;left: 25px;}
 
@@ -201,7 +199,7 @@ img.ks-demo-lazy {display: block;width: 100%;height: auto;}
     top: 0;
     right: 0;
     border-radius: 0px;
-       background: linear-gradient(to bottom, #f7b733, #fc4a1a);
+        background: linear-gradient(to bottom, #e51466, #750934);
     overflow: hidden;
    }
 .pageBackgroundColor .home-page-padding	{      background-color: transparent;
@@ -500,20 +498,51 @@ img.ks-demo-lazy {display: block;width: 100%;height: auto;}
 .coloumnborder{padding:0px;}
 .HotelDiVBox{width: 100%;clear: both;float: left;}
 .HotelDiVBoxLeft{float:left;width:17%;text-align: center;padding: 10px 0px 10px 0px;}
-.HotelDiVBoxRight{float:right;width:80%;border-bottom: 1px solid #c2c2c2;padding: 10px 0px 10px 0px;}
-.HotelDiVBoxRight .Pseitel{margin: 0px;font-size: 16px;    color: #848383;}
+.HotelDiVBoxRight{}
+	.content-blockmain{    background: #ba275e;
+       padding: 25px 12px;
+    display: flow-root;}
+	.HotelDiVBox1{    float: left;
+    border: 1px solid #fff;
+    padding: 5px;
+    border-radius: 5px;
+    width: 44%;}
+	.HotelDiVBoxRight .Pseitel i{font-size: 16px;}
+.HotelDiVBoxRight .Pseitel{    margin: 0px;
+    font-size: 16px;
+    color: #fff;
+    text-align: center;}
 .HotelDiVBoxRight .Pseitel span{float: left;
-    width: 100%;
+    width: 50%;
     display: inline-block;}
-.HotelDiVBoxRight .PseitelDes{margin: 0px;font-size: 22px; color: #000;}
+.HotelDiVBoxRight .PseitelDes{    margin: 0px;
+    font-size: 22px;
+    color: #fff;
+    text-align: center;
+    font-weight: 700}
+	.HotelDiVBoxmaindiv  .Pseitel{text-align: left;
+    color: #000;
+    font-weight: 600;}
+	.HotelDiVBoxmaindiv  .PseitelDes{    text-align: left;
+    color: #000;
+    font-size: 25px}
+	.HotelDiVBoxmaindiv {display: flow-root;
+    padding: 25px;
+    background: #ededed;
+    border-top: 1px solid #e2dbdb;}
 .HotelDiVBoxLeft .fa{font-size: 18px;position: relative;top: 16px;}
 .paddingNOne{padding:0px;margin: 0px;}
-.calendarDatein{float: left;width: 47%;border-right: 1px solid #c2c2c2;}
+.calendarDatein{float: left;width: 47%;border-right: 0px solid #c2c2c2;}
 .calendarDateout{float: right;width: 48%;border-right: 0px solid #c2c2c2;}
-.calendarDateout .BoxPagebold,
-.calendarDatein .BoxPagebold{font-size: 16px;color: #000;}
-.calendarDatein .BoxPageLoc,
-.calendarDateout .BoxPageLoc{font-size: 16px;color: #848383;}
+
+.BoxPageLoc{    font-size: 13px;
+    color: #000;
+    font-weight: 600;}
+.HotelDiVBox-last-flight{    display: flow-root;
+    padding: 35px 15px;}	
+.BoxPagebold{    font-size: 22px;
+    color: #444;
+    font-weight: 600;}
 .btnHotelrel{    position: fixed;
     bottom: 0;
     left: 0px;
@@ -521,7 +550,14 @@ img.ks-demo-lazy {display: block;width: 100%;height: auto;}
     display: inline-block;
     text-align: center;
     width: 100%;    border-radius: 0 !important;font-size: 18px;}
-.btnHotelrel a{display: inline-block;text-align: center;width: 100%;color: #fff;padding: 15px 0px;font-size: 18px;background-color:#000;}	
+.btnHotelrel a{display: inline-block;
+    text-align: center;
+    width: 100%;
+    color: #fff;
+    padding: 32px 0px;
+    font-size: 18px;
+    background-color: #96224d;
+    text-transform: capitalize;}	
 .HotelDiVBox-last .HotelDiVBoxRight{border-bottom: 0px;}
 #searchHotel_frm {margin-top:30px; }
 .boxleftDse{}
@@ -642,11 +678,29 @@ margin-top: 10%;}
 .navbar .left{cursor: pointer;}
 .SearchPagetile .buttons-row a i{color: #fff; font-size: 9px;}
 .HotelDiVBoxLeft .material-icons{font-size: 27px;position: relative;top: 9px;}	
-.flightRound{width: 100%;float: left;background-color: #f7941d;}	
-.flightRound a{text-align: center;width: 50%;float: left;color: #fff;font-size: 14px;    position: relative;box-sizing: border-box;padding: 10px;}	
+.flightRound{background-color: #ba275e;
+    display: flow-root;
+    padding: 15px;}
+.Dateposition .HotelDiVBoxRight{display: flow-root;
+    padding: 25px;
+    background: #f7f7f7}	
+.flightRound a{text-align: center;
+    width: 50%;
+    float: left;
+    color: #fff;
+    font-size: 14px;
+    position: relative;
+    box-sizing: border-box;
+    padding: 10px;
+    border: 1px solid #fff;}	
 .flightRound a i{position: absolute;    margin: 0px -29px;}
-.flightRound .active{background-color: #f7b733;}	
-.HotelDiVBox-last-flight{    margin-bottom: 100px;}	
+.flightRound .active{background-color: #fff;
+    color: #ba275e;}	
+.HotelDiVBox-last-flight{  }
+.HotelDiVBox-last-flight .Pseitel{padding: 7px;
+    display: flex;
+    border-radius: 5px;    color: #000;
+    border: 1px solid #ba275e;}	
 .search-flightspage .navbar-inner{box-shadow: 0 2px 12px rgba(0,0,0,.175);}	
 .search-flightspage .page-content{padding-top: 56px !important;}
 .BontentBlockDrawer{padding-top: 0px !important;}	
@@ -755,7 +809,7 @@ margin-top: 10%;}
 .ft-detail-header-imglodaradloder .card-header>.sk-wave .sk-rect{width: 3px;background-color: #f7941d;}
 .ft-detail-header-imglodaradloder .card-header>.sk-wave .sk-rect1{margin: 0 1px 0 0;}
 #searchActivity_frm{ margin-top: 30px;}
-#searchFlight_frm{ margin-top: 30px;}
+#searchFlight_frm{ }
 .card-header-lodardr{    min-height: 330px !important;}
 
 
@@ -983,7 +1037,7 @@ margin-top: 10%;}
      position: fixed;
     z-index: 9999;
     text-align: center;
-        background: linear-gradient(to bottom, #f7b733, #fc4a1a);
+        background: linear-gradient(to bottom, #ba275e, #ba275e);
     height: 100%;
     width: 100%;
 }
