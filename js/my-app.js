@@ -1,6 +1,6 @@
 // Initialize your app
 var myApp = new Framework7({
-    modalTitle: 'Adivaha',
+    modalTitle: 'happyfly',
     // If it is webapp, we can enable hash navigation:
     pushState: true,
     material: true,
@@ -480,22 +480,22 @@ if(mt=='result'){
 	// alert('result');
 $$('.search-resultspage').find('.search-resultsPageNavbarTitle').html(destination);
 $$('.search-resultspage').find('.search-resultsPageNavbarTitlef').html('CheckIn: '+checkIn+' | CheckOut: '+checkOut+' | Rooms: '+rooms);
-var frameSrc ='https://www.abengines.com/search-results/?version=v2&pid=77A721&mid=HBDS5C437514F0404&device=app&mt=result&dest='+destination+'&checkIn='+checkIn+'&checkOut='+checkOut+'&rooms='+rooms+'&adults='+adults+'&children='+childs+'&childAge='+childAge+'&language='+Cri_language+'&currency=USD&cityId='+cityId+'&hotel_name=&datatype=&IsApp=Yes';
+var frameSrc ='https://www.abengines.com/search-results/?version=v2&pid=77A758&mid=HBDS5C437514F0404&device=app&mt=result&dest='+destination+'&checkIn='+checkIn+'&checkOut='+checkOut+'&rooms='+rooms+'&adults='+adults+'&children='+childs+'&childAge='+childAge+'&language='+Cri_language+'&currency=USD&cityId='+cityId+'&hotel_name=&datatype=&IsApp=Yes';
 }
 if(mt=='detail'){
- var frameSrc ='https://www.abengines.com/search-results/?version=v2&pid=77A721&mid=HBDS5C437514F0404&device=app'+queryUrl;
- alert('detail');
+ var frameSrc ='https://www.abengines.com/search-results/?version=v2&pid=77A758&mid=HBDS5C437514F0404&device=app'+queryUrl;
+ //alert('detail');
 
 }
 
 if(mt=='booking'){
-var frameSrc ='https://www.abengines.com/search-results/?version=v2&pid=77A721&mid=HBDS5C437514F0404&device=app'+queryUrl;
-alert('booking');
+var frameSrc ='https://www.abengines.com/search-results/?version=v6&pid=77A758&mid=HBDS5C437514F0404&device=app'+queryUrl;
+//alert('booking');
 
 }
 if(mt=='confirmation'){
-var frameSrc ='https://www.abengines.com/search-results/?version=v2&pid=77A721&mid=HBDS5C437514F0404&device=app'+queryUrl;
-alert('confirmation');
+var frameSrc ='https://www.abengines.com/search-results/?version=v6&pid=77A758&mid=HBDS5C437514F0404&device=app'+queryUrl;
+//alert('confirmation');
 }
 
 
@@ -542,7 +542,7 @@ console.log('urlchanged');
 		
 		/* alert('test1'); */
 		if(url4[1]!=''){
-			var frameSrc ='https://www.abengines.com/search-results/?version=v2&pid=77A721&mid=HBDS5C437514F0404&device=app'+urlquery;
+			var frameSrc ='https://www.abengines.com/search-results/?version=v2&pid=77A758&mid=HBDS5C437514F0404&device=app'+urlquery;
 		var htmlifrm = "<div data-distance='50' id='searchpageContentDiv' class='iframecustom page-content padding-top-56'><iframe src='"+frameSrc+"' scrolling='no' frameborder='0' style='width: 100%; overflow: hidden; height: 1320px;' id='iFrameResizer0'></iframe></div>";
 		
 	
@@ -619,7 +619,7 @@ for(i=0; i<qryKey.length; i++){
 }
 
 if(mt=='detail'){
-var frameSrc ='https://www.abengines.com/search-results/?version=v2&pid=77A721&mid=HBDS5C437514F0404&device=app'+queryUrl;
+var frameSrc ='https://www.abengines.com/search-results/?version=v2&pid=77A758&mid=HBDS5C437514F0404&device=app'+queryUrl;
 alert('detail');
 $$('.hotel-detailpage').find('iframe').attr('src',frameSrc);
  }
@@ -927,12 +927,12 @@ $$('.item-title').html(origin_name+' ('+origin_iata+') To '+destination_name+' (
 //$$('#iFrameResizer0').attr('src','');
 
 
-//var frameSrc ='https://www.abengines.com/search-results/?version=v2&pid=77A721&mid=ADIM5C66A1BF561B1&mt='+mt+'&aid=&origin_name='+origin_name+'&origin_iata='+origin_iata+'&destination_name='+destination_name+'&destination_iata='+destination_iata+'&depart_date='+depart_date+'&return_date='+return_date+'&one_way='+one_way+'&adults='+adults+'&children='+children+'&infants='+infants+'&currency='+currency+'&language='+locale+'&isDomestic='+isDomestic+'&cabin='+cabin;
+//var frameSrc ='https://www.abengines.com/search-results/?version=v6&pid=77A758&mid=ADIM5C66A1BF561B1&mt='+mt+'&aid=&origin_name='+origin_name+'&origin_iata='+origin_iata+'&destination_name='+destination_name+'&destination_iata='+destination_iata+'&depart_date='+depart_date+'&return_date='+return_date+'&one_way='+one_way+'&adults='+adults+'&children='+children+'&infants='+infants+'&currency='+currency+'&language='+locale+'&isDomestic='+isDomestic+'&cabin='+cabin;
 
 
 
 if(mt=="result"){
-	var frameSrc ='https://www.abengines.com/search-results/?version=v2&pid=77A721&mid=ADIM5C66A1BF561B1'+queryUrl;
+	var frameSrc ='https://www.abengines.com/search-results/?version=v6&pid=77A758&mid=ADIM5C66A1BF561B1'+queryUrl;
 	$$('#iFrameResizer0').attr('src',frameSrc);
 }
 
@@ -940,7 +940,7 @@ if(mt=="result"){
 window.onhashchange = function() {
 	
 	
-	alert('changeurl');
+	//alert('changeurl');
 	
 	$$(".view").hide();
 
@@ -971,7 +971,7 @@ window.onhashchange = function() {
 		
 		/* alert('test1'); */
 		if(url4[1]!=''){
-			var frameSrc ='https://www.abengines.com/search-results/?version=v2&pid=77A721&mid=ADIM5C66A1BF561B1'+urlquery;
+			var frameSrc ='https://www.abengines.com/search-results/?version=v6&pid=77A758&mid=ADIM5C66A1BF561B1'+urlquery;
 	
 	var htmlifrm = "<div data-distance='50' id='searchpageContentDiv' class='iframecustom page-content padding-top-56'><iframe src='"+frameSrc+"' scrolling='no' frameborder='0' style='width: 100%; overflow: hidden; height: 1320px;' id='iFrameResizer0'></iframe></div>";
 		
@@ -1019,7 +1019,7 @@ $$('.pageFlashLoaderKK').show();
 setTimeout(function(){ $$('.pageFlashLoaderKK').hide('slow'); }, 3000);	
 
 
-var frameSrc ='https://www.abengines.com/user-management/?version=v2&pid=77A721&mid=USERMANAGEMENT&mt=login&aid=&action=logout&ParentRestParam=';
+var frameSrc ='https://www.abengines.com/user-management/?version=v6&pid=77A758&mid=USERMANAGEMENT&mt=login&aid=&action=logout&ParentRestParam=';
 $$('#iFrameResizer0').attr('src',frameSrc);
 /*
 $$("#pageContentDiv").html('<iframe src="'+frameSrc+'" scrolling="no" frameborder="0" style="width: 100%; overflow: hidden;" id="iFrameResizer0"></iframe>');
@@ -1036,7 +1036,7 @@ $$('.pageFlashLoaderKK').show();
 setTimeout(function(){ $$('.pageFlashLoaderKK').hide('slow'); }, 3000);	
 
 
-var frameSrc ='https://www.abengines.com/my-booking/?version=v2&pid=77A721&mid=USERMANAGEMENT&mt=mt&aid=7&&ParentRestParam=';
+var frameSrc ='https://www.abengines.com/my-booking/?version=v6&pid=77A758&mid=USERMANAGEMENT&mt=mt&aid=7&&ParentRestParam=';
 $$('#iFrameResizer0').attr('src',frameSrc);
 /*
 $$("#pageContentDiv").html('<iframe src="'+frameSrc+'" scrolling="no" frameborder="0" style="width: 100%; overflow: hidden;" id="iFrameResizer0"></iframe>');
