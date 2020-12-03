@@ -311,7 +311,7 @@ img.ks-demo-lazy {display: block;width: 100%;height: auto;}
     color: #fff;
     font-size: 18px;
     text-transform: uppercase;
-    background-color: #2152a0;}
+    background-color: #ba275e;}
 .btn_DoneRooms a{color: #fff;    font-size: 18px;}
 
 
@@ -498,7 +498,8 @@ img.ks-demo-lazy {display: block;width: 100%;height: auto;}
 .coloumnborder{padding:0px;}
 .HotelDiVBox{width: 100%;clear: both;float: left;}
 .HotelDiVBoxLeft{float:left;width:17%;text-align: center;padding: 10px 0px 10px 0px;}
-.HotelDiVBoxRight{}
+.HotelDiVBoxRight{margin: 8px 0px;
+    border-bottom: 1px solid #fcfcfc;}
 	.content-blockmain{    background: #ba275e;
        padding: 25px 12px;
     display: flow-root;}
@@ -510,16 +511,16 @@ img.ks-demo-lazy {display: block;width: 100%;height: auto;}
 	.HotelDiVBoxRight .Pseitel i{font-size: 16px;}
 .HotelDiVBoxRight .Pseitel{    margin: 0px;
     font-size: 16px;
-    color: #fff;
-    text-align: center;}
+    color: #777;
+    text-align: left;}
 .HotelDiVBoxRight .Pseitel span{float: left;
     width: 50%;
     display: inline-block;}
 .HotelDiVBoxRight .PseitelDes{    margin: 0px;
     font-size: 22px;
-    color: #fff;
-    text-align: center;
-    font-weight: 700}
+    color: #000;
+    text-align: left;
+    font-weight: 700;}
 	.HotelDiVBoxmaindiv  .Pseitel{text-align: left;
     color: #000;
     font-weight: 600;}
@@ -532,14 +533,15 @@ img.ks-demo-lazy {display: block;width: 100%;height: auto;}
     border-top: 1px solid #e2dbdb;}
 .HotelDiVBoxLeft .fa{font-size: 18px;position: relative;top: 16px;}
 .paddingNOne{padding:0px;margin: 0px;}
-.calendarDatein{float: left;width: 47%;border-right: 0px solid #c2c2c2;}
-.calendarDateout{float: right;width: 48%;border-right: 0px solid #c2c2c2;}
+.calendarDatein{float: left;border-right: 0px solid #c2c2c2;}
+.calendarDateout{    float: right;
+    border-left: 1px solid #c2c2c2;
+    padding: 0px 15px;}
 
 .BoxPageLoc{    font-size: 13px;
     color: #000;
     font-weight: 600;}
-.HotelDiVBox-last-flight{    display: flow-root;
-    padding: 35px 15px;}	
+.HotelDiVBox-last-flight{   }	
 .BoxPagebold{    font-size: 22px;
     color: #444;
     font-weight: 600;}
@@ -681,9 +683,7 @@ margin-top: 10%;}
 .flightRound{background-color: #ba275e;
     display: flow-root;
     padding: 15px;}
-.Dateposition .HotelDiVBoxRight{display: flow-root;
-    padding: 25px;
-    background: #f7f7f7}	
+.Dateposition .HotelDiVBoxRight{}	
 .flightRound a{text-align: center;
     width: 50%;
     float: left;
@@ -700,7 +700,7 @@ margin-top: 10%;}
 .HotelDiVBox-last-flight .Pseitel{padding: 7px;
     display: flex;
     border-radius: 5px;    color: #000;
-    border: 1px solid #ba275e;}	
+    border: 0px solid #ba275e;}	
 .search-flightspage .navbar-inner{box-shadow: 0 2px 12px rgba(0,0,0,.175);}	
 .search-flightspage .page-content{padding-top: 56px !important;}
 .BontentBlockDrawer{padding-top: 0px !important;}	
