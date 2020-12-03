@@ -24,55 +24,62 @@
         <input type="hidden" name="flight_to" id="flight_to" value="Goa, India"> 	 
         <input type="hidden" name="flight_to_locationId" id="flight_to_locationId" value="GOI">		
 		<div class="content-block paddingNOne">
-		<div class="content-blockmain">
-				<div class="HotelDiVBox1">
-					
+				<div class="HotelDiVBox">
+					<div class="HotelDiVBoxLeft">
+						<i class="material-icons">flight_takeoff</i>
+					</div>
 					<div class="HotelDiVBoxRight">
 						<a href="#" id="autocomplete-standalone-popup">
-						<p class="item-title Pseitel"><i class="material-icons">flight_takeoff</i> From</p>
+						<p class="item-title Pseitel">From</p>
 						<p class="item-after PseitelDes" id="selectedDest">Delhi,India</p>
 						</a>
 					</div>
 				</div>
 				
-				<div class="HotelDiVBox1">
-					
+				<div class="HotelDiVBox">
+					<div class="HotelDiVBoxLeft">
+						<i class="material-icons">flight_land</i>
+					</div>
 					<div class="HotelDiVBoxRight">
 						<a href="#" id="autocomplete-standalone-popup-to">
-							<p class="item-title Pseitel"><i class="material-icons">flight_land</i> To</p>
+						<p class="item-title Pseitel">To</p>
 						<p class="item-after PseitelDes"  id="selectedToDest">Goa,India</p>
 						</a>
 					</div>
-				</div></div>
+				</div>
 				<div class="HotelDiVBox Dateposition">
-					
+					<div class="HotelDiVBoxLeft">
+						<i class="fa fa-calendar" aria-hidden="true"></i>
+					</div>
 					<div class="HotelDiVBoxRight">
 						<input type="hidden" name="startDate" id="startDate" value="">
 						<input type="hidden" name="endDate" id="endDate" value="">
 						<a href="#" class="col-33 startDatecss calendarDatein" id="adivahacalendar">
-                           <div class="BoxPageLoc"><i class="fa fa-calendar" aria-hidden="true"></i> Departure</div>
+                        <div class="BoxPageLoc">Departure Date</div>
 						<div class="BoxPagebold" id="startDate_txt">Wed, <span class="Date_txt">28</span> Feb</div>
                     </a>
 					<a href="#" class="col-33 endDatecss calendarDateout disabledClass" id="">
-                      <div class="BoxPageLoc"><i class="fa fa-calendar" aria-hidden="true"></i> Return</div>
+                     <div class="BoxPageLoc">Return Date</div>
                      <div class="BoxPagebold" id="endDate_txt">Thu, <span class="Date_txt">29</span> Feb</div>
                     </a>
 					<input type="text" name="appCalendar" id="appCalendar" value="" style="opacity: 0;">
 					</div>
 				</div>
-				<div class="HotelDiVBoxmaindiv ">
 			    <div class="HotelDiVBox ">
-					
+					<div class="HotelDiVBoxLeft">
+						<i class="material-icons">group</i>
+					</div>
 					<div class="HotelDiVBoxRight">
 						<a href="#" data-popup=".aautocomplete-standalone-popup" class="open-popup">
 						<p class="item-title Pseitel">Passengers</p>
 						<p class="item-after PseitelDes"  id="selectedPassengers">1 Passengers</p>
 						</a>
 					</div>
-				</div></div>
-				<div class="HotelDiVBox-last-flight">
-				<div class="HotelDiVBox HotelDiVBox-last">
-					
+				</div>
+				<div class="HotelDiVBox HotelDiVBox-last HotelDiVBox-last-flight">
+					<div class="HotelDiVBoxLeft">
+						<i class="material-icons">card_travel</i>
+					</div>
 					<div class="HotelDiVBoxRight">
 					<p class="item-title Pseitel">
 					  <span><input type="radio" name="result" checked="checked" value="Economy">Economy </span>
@@ -80,7 +87,7 @@
 					 </p>
 					</div>
 				</div>
-			 </div>
+			 
 			 
 			 <div class="btnHotelrel"><a href="javascript:void(0)" class="findFlightResults ">SEARCH FLIGHTS</a></div>
 		<!-- Two popup use code -->
