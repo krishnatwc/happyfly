@@ -1,6 +1,6 @@
 // Initialize your app
 var myApp = new Framework7({
-    modalTitle: 'happyfly',
+    modalTitle: 'Adivaha',
     // If it is webapp, we can enable hash navigation:
     pushState: true,
     material: true,
@@ -46,8 +46,8 @@ var mainView = myApp.addView('.view-main', {
 
 
 var RequestURL ='https://www.adivaha.com/demo/MobAppRequest';
-var TPHotelUrl ='https://flight-images.happyfly.com/hotels';
-var TPFlightUrl ='https://apptravelpayouts.happyfly.com/flights';
+var TPHotelUrl ='https://flight-images.adivaha.com/hotels';
+var TPFlightUrl ='https://apptravelpayouts.adivaha.com/flights';
 var marker='40247';
 
 myApp.onPageInit('index', function (page) {
@@ -427,12 +427,20 @@ if(page.name=='search-hotels'){
 }
 
 /*=== Search Result page ====*/
+
+// alert(page.name);
 if(page.name=='search-results')
 {
+	
+var mt =page.query.mt;
+
 $$('.pageFlashLoaderKK').show();	
 
 
-setTimeout(function(){ $$('.pageFlashLoaderKK').hide('slow'); }, 3000);	
+setTimeout(function(){
+	$$('.pageFlashLoaderKK').hide('slow'); 
+}, 3000);	
+
 var destination =page.query.dest;
 var latitude =page.query.latitude;	 
 var longitude =page.query.longitude;	 
@@ -445,6 +453,7 @@ var rooms =page.query.rooms;
 var adults = page.query.adults;
 var childs = page.query.childs;
 var childAge = page.query.childAge;
+
 if(childs=='' &&  childAge==''){
 	var childs = 0;
 	var childAge = 0;
@@ -452,29 +461,129 @@ if(childs=='' &&  childAge==''){
 
 var cityId =page.query.cityId;
 
-$$('.search-resultspage').find('.search-resultsPageNavbarTitle').html(destination);
-$$('.search-resultspage').find('.search-resultsPageNavbarTitlef').html('CheckIn: '+checkIn+' | CheckOut: '+checkOut+' | Rooms: '+rooms);
 
-//$$('#iFrameResizer0').attr('src','');
 
-var frameSrc ='https://www.abengines.com/search-results/?version=v2&pid=77A758&mid=HBDS5C437514F0404&device=app&mt=result&dest='+destination+'&checkIn='+checkIn+'&checkOut='+checkOut+'&rooms='+rooms+'&adults='+adults+'&children='+childs+'&childAge='+childAge+'&language='+Cri_language+'&currency=USD&cityId='+cityId+'&hotel_name=&datatype=';
-$$('#iFrameResizer0').attr('src',frameSrc);
+/* query */
+var queryobj = page.query;
+var i;
+var qryVal = Object.values(queryobj);
+var qryKey = Object.keys(queryobj);
+var queryUrl = '';
+for(i=0; i<qryKey.length; i++){
+	  queryUrl +=	'&'+qryKey[i]+'='+qryVal[i];
 }
 
-/*=== Search Result page ====*/
+//$$('#iFrameResizer0').attr('src','');
+// alert('mt'+mt);
+
+if(mt=='result'){
+	// alert('result');
+$$('.search-resultspage').find('.search-resultsPageNavbarTitle').html(destination);
+$$('.search-resultspage').find('.search-resultsPageNavbarTitlef').html('CheckIn: '+checkIn+' | CheckOut: '+checkOut+' | Rooms: '+rooms);
+var frameSrc ='https://www.abengines.com/search-results/?version=v2&pid=77A721&mid=HBDS5C437514F0404&device=app&mt=result&dest='+destination+'&checkIn='+checkIn+'&checkOut='+checkOut+'&rooms='+rooms+'&adults='+adults+'&children='+childs+'&childAge='+childAge+'&language='+Cri_language+'&currency=USD&cityId='+cityId+'&hotel_name=&datatype=&IsApp=Yes';
+}
+if(mt=='detail'){
+ var frameSrc ='https://www.abengines.com/search-results/?version=v2&pid=77A721&mid=HBDS5C437514F0404&device=app'+queryUrl;
+ alert('detail');
+
+}
+
+if(mt=='booking'){
+var frameSrc ='https://www.abengines.com/search-results/?version=v2&pid=77A721&mid=HBDS5C437514F0404&device=app'+queryUrl;
+alert('booking');
+
+}
+if(mt=='confirmation'){
+var frameSrc ='https://www.abengines.com/search-results/?version=v2&pid=77A721&mid=HBDS5C437514F0404&device=app'+queryUrl;
+alert('confirmation');
+}
 
 
-if(page.name=='search-results'){
+
+
+$$('#iFrameResizer0').attr('src',frameSrc);
+
+window.onhashchange = function() { 
+
+console.log('urlchanged');
+// alert('mt==='+mt);
+  var browurl =window.location.href;
+	/* window.location.href = browurl;
+	  mainView.router.loadPage(browurl);
+		mainView.router.refreshPage() */;
+
+		$$(".views").addClass("abhishek");
+		$$(".abhishek").attr("id","addpagecustom");
+		
+		var url = window.location.href;
+		var url1 = url.split("?");
+		var url2 = url1[1];
+		
+		/* if(url2=="hotelType=1"){
+			window.location.reload()
+		} */
+		var url3 = url2.split("&");
+		console.log(url3);
+		// alert(url3);
+		var i;
+		var urlquery='';
+		
+		for(i=0;i<url3.length;i++){
+			
+			urlquery += '&'+url3[i];
+		}
+		if(url3[0]=="mt=result"){
+				urlquery += '&childAge=0&children=0';
+				// alert('back-mt-reusult')
+			}
+			// alert(urlquery);
+		
+		var url4 = url3[0].split("=");
+		
+		/* alert('test1'); */
+		if(url4[1]!=''){
+			var frameSrc ='https://www.abengines.com/search-results/?version=v2&pid=77A721&mid=HBDS5C437514F0404&device=app'+urlquery;
+		var htmlifrm = "<div data-distance='50' id='searchpageContentDiv' class='iframecustom page-content padding-top-56'><iframe src='"+frameSrc+"' scrolling='no' frameborder='0' style='width: 100%; overflow: hidden; height: 1320px;' id='iFrameResizer0'></iframe></div>";
+		
+	
+		
+		/* $(window).on('popstate', function(event) {
+			history.back(); 
+		}); */
+		
+		$$("#searchpageContentDiv").remove();
+		$$(".abhishek").append(htmlifrm);
+		$$('#addpagecustom').find("#iFrameResizer0").attr('src',frameSrc);
+		$$("#searchpageContentDiv").css("z-index","99999");
+		$$("#searchpageContentDiv").css("position","inherit");
+		// $$(".iframecustom").css("position","inherit");
+		
+		$$(".view").hide();
+		}
+
+		
+
+	
+		 
+}
+
+}
+
+
+
+
+
+/*=== detail page ====*/
+/* 
+if(page.name=='hotel-detail'){
 $$('.pageFlashLoaderKK').show();	
-
-
 
 setTimeout(function(){ $$('.pageFlashLoaderKK').hide('slow'); }, 3000);	
 var hotelid =page.query.hotelid;
 var hotelname =page.query.hotelname;
 var dest =page.query.dest;	
 var cityId  =page.query.cityId;
-/* alert(cityId); */
+
 if(typeof cityId!='undefined' && cityId!=''){
 var latlongArr =cityId.split('_');
 var latitude =latlongArr[0];
@@ -499,7 +608,7 @@ var mt =page.query.mt;
 $$('.hotel-detailpage').find('.search-resultsPageNavbarTitle').html(hotelname);
 $$('.hotel-detailpage').find('.search-resultsPageNavbarTitlef').html('<span>CheckIn: '+checkIn+' | CheckOut: '+checkOut+' | Rooms: '+rooms+'</span>');
 
-/* query */
+
 var queryobj = page.query;
 var i;
 var qryVal = Object.values(queryobj);
@@ -510,22 +619,12 @@ for(i=0; i<qryKey.length; i++){
 }
 
 if(mt=='detail'){
-var frameSrc ='https://www.abengines.com/search-results/?version=v2&pid=77A758&mid=HBDS5C437514F0404&device=app'+queryUrl; }
-if(mt=='booking'){
-var frameSrc ='https://www.abengines.com/search-results/?version=v2&pid=77A758&mid=HBDS5C437514F0404&device=app'+queryUrl;}
-if(mt=='confirmation'){
-var frameSrc ='https://www.abengines.com/search-results/?version=v2&pid=77A758&mid=HBDS5C437514F0404&device=app'+queryUrl;}
+var frameSrc ='https://www.abengines.com/search-results/?version=v2&pid=77A721&mid=HBDS5C437514F0404&device=app'+queryUrl;
+alert('detail');
+$$('.hotel-detailpage').find('iframe').attr('src',frameSrc);
+ }
 
-
-$$('#iFrameResizer0').attr('src',frameSrc);
-
-window.onhashchange = function() { 
-	 $$(".views").hide();
-     window.location.reload();
-};
-
-
-}
+} */
 
 
 
@@ -812,6 +911,7 @@ var locale = page.query.locale;
 var one_way = page.query.one_way;
 var cabin = page.query.cabin;
 var isDomestic = page.query.isDomestic;
+var mt = page.query.mt;
 
 /* query */
 var queryobj = page.query;
@@ -827,14 +927,71 @@ $$('.item-title').html(origin_name+' ('+origin_iata+') To '+destination_name+' (
 //$$('#iFrameResizer0').attr('src','');
 
 
-//var frameSrc ='https://www.abengines.com/search-results/?version=v2&pid=77A758&mid=ADIM5C66A1BF561B1&mt='+mt+'&aid=&origin_name='+origin_name+'&origin_iata='+origin_iata+'&destination_name='+destination_name+'&destination_iata='+destination_iata+'&depart_date='+depart_date+'&return_date='+return_date+'&one_way='+one_way+'&adults='+adults+'&children='+children+'&infants='+infants+'&currency='+currency+'&language='+locale+'&isDomestic='+isDomestic+'&cabin='+cabin;
+//var frameSrc ='https://www.abengines.com/search-results/?version=v2&pid=77A721&mid=ADIM5C66A1BF561B1&mt='+mt+'&aid=&origin_name='+origin_name+'&origin_iata='+origin_iata+'&destination_name='+destination_name+'&destination_iata='+destination_iata+'&depart_date='+depart_date+'&return_date='+return_date+'&one_way='+one_way+'&adults='+adults+'&children='+children+'&infants='+infants+'&currency='+currency+'&language='+locale+'&isDomestic='+isDomestic+'&cabin='+cabin;
 
-var frameSrc ='https://www.abengines.com/search-results/?version=v2&pid=77A758&mid=ADIM5C66A1BF561B1'+queryUrl;
-$$('#iFrameResizer0').attr('src',frameSrc);
 
-window.onhashchange = function() { 
-	 $$(".views").hide();
-     window.location.reload();
+
+if(mt=="result"){
+	var frameSrc ='https://www.abengines.com/search-results/?version=v2&pid=77A721&mid=ADIM5C66A1BF561B1'+queryUrl;
+	$$('#iFrameResizer0').attr('src',frameSrc);
+}
+
+
+window.onhashchange = function() {
+	
+	
+	alert('changeurl');
+	
+	$$(".view").hide();
+
+		var url = window.location.href;
+		var url1 = url.split("?");
+		var url2 = url1[1];
+		
+		/* if(url2=="hotelType=1"){
+			window.location.reload()
+		} */
+		var url3 = url2.split("&");
+		console.log(url3);
+		// alert(url3);
+		var i;
+		var urlquery='';
+		
+		for(i=0;i<url3.length;i++){
+			
+			urlquery += '&'+url3[i];
+		}
+		/* if(url3[0]=="mt=result"){
+				urlquery += '&childAge=0&children=0';
+				
+			} */
+			// alert(urlquery);
+		
+		var url4 = url3[0].split("=");
+		
+		/* alert('test1'); */
+		if(url4[1]!=''){
+			var frameSrc ='https://www.abengines.com/search-results/?version=v2&pid=77A721&mid=ADIM5C66A1BF561B1'+urlquery;
+	
+	var htmlifrm = "<div data-distance='50' id='searchpageContentDiv' class='iframecustom page-content padding-top-56'><iframe src='"+frameSrc+"' scrolling='no' frameborder='0' style='width: 100%; overflow: hidden; height: 1320px;' id='iFrameResizer0'></iframe></div>";
+		
+		/* $(window).on('popstate', function(event) {
+			history.back(); 
+		}); */
+		
+		// $$('#iFrameResizer0').attr('src',frameSrc);
+		  $$(".iframecustom").remove();
+		 $$("#pageContentDiv").remove();
+		$$(".views").append(htmlifrm); 
+		
+		 /* 		
+		$$(".abhishek").append(htmlifrm);
+		$$('#addpagecustom').find("#iFrameResizer0").attr('src',frameSrc);
+		$$("#searchpageContentDiv").css("z-index","99999");
+		$$("#searchpageContentDiv").css("position","inherit"); */
+		
+		}
+
 };
 
 /*
@@ -862,7 +1019,7 @@ $$('.pageFlashLoaderKK').show();
 setTimeout(function(){ $$('.pageFlashLoaderKK').hide('slow'); }, 3000);	
 
 
-var frameSrc ='https://www.abengines.com/user-management/?version=v2&pid=77A758&mid=USERMANAGEMENT&mt=login&aid=&action=logout&ParentRestParam=';
+var frameSrc ='https://www.abengines.com/user-management/?version=v2&pid=77A721&mid=USERMANAGEMENT&mt=login&aid=&action=logout&ParentRestParam=';
 $$('#iFrameResizer0').attr('src',frameSrc);
 /*
 $$("#pageContentDiv").html('<iframe src="'+frameSrc+'" scrolling="no" frameborder="0" style="width: 100%; overflow: hidden;" id="iFrameResizer0"></iframe>');
@@ -879,7 +1036,7 @@ $$('.pageFlashLoaderKK').show();
 setTimeout(function(){ $$('.pageFlashLoaderKK').hide('slow'); }, 3000);	
 
 
-var frameSrc ='https://www.abengines.com/my-booking/?version=v2&pid=77A758&mid=USERMANAGEMENT&mt=mt&aid=7&&ParentRestParam=';
+var frameSrc ='https://www.abengines.com/my-booking/?version=v2&pid=77A721&mid=USERMANAGEMENT&mt=mt&aid=7&&ParentRestParam=';
 $$('#iFrameResizer0').attr('src',frameSrc);
 /*
 $$("#pageContentDiv").html('<iframe src="'+frameSrc+'" scrolling="no" frameborder="0" style="width: 100%; overflow: hidden;" id="iFrameResizer0"></iframe>');
